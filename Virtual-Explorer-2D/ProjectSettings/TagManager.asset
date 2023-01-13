@@ -41,3 +41,27 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: underbackground
+    uniqueID: 3225801159
+    locked: 0
+  - name: background
+    uniqueID: 504387803
+    locked: 0
+  - name: playerground_bg_foilage
+    uniqueID: 3750654149
+    locked: 0
+  - name: playerground
+    uniqueID: 3076980441
+    locked: 0
+  - name: overlayground
+    uniqueID: 101468497
+    locked: 0
+  - name: player
+    uniqueID: 3832659345
+    locked: 0
+  - name: foreground
+    uniqueID: 2417617311
+    locked: 0
+  - name: foreground_unlit
+    uniqueID: 2798278463
+    locked: 0
