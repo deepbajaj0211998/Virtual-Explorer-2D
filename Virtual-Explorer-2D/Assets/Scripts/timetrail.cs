@@ -7,7 +7,8 @@ using UnityEngine;
 public class timetrail : MonoBehaviour
 {
     public TextMeshProUGUI timeText;
-
+    public GameObject gameoverscr;
+    public GameObject player;
     public float totaltime=60f;
     float time;
     public float timeleft;
@@ -36,7 +37,8 @@ public class timetrail : MonoBehaviour
             if(timeleft==0)
             {
                 gameover=true;
-                Debug.Log("you loose");
+                gameoverscr.transform.gameObject.SetActive(true);
+                player.transform.gameObject.SetActive(false);
             }
         }
     }
