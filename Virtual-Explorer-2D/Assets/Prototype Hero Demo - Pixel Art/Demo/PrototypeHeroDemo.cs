@@ -1,19 +1,28 @@
 ﻿using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PrototypeHeroDemo : MonoBehaviour {
 
     [Header("Variables")]
     [SerializeField] float      m_maxSpeed = 4.5f;
+    [SerializeField] float      health = 100f;
     [SerializeField] float      m_jumpForce = 7.5f;
     [SerializeField] bool       m_hideSword = false;
+    private int life=3;
     [Header("Effects")]
     [SerializeField] GameObject m_RunStopDust;
+    [SerializeField] Image health_image;
+    [SerializeField] TextMeshProUGUI life_text;
     [SerializeField] GameObject m_JumpDust;
     [SerializeField] GameObject m_LandingDust;
+    [SerializeField] GameObject timer;
+    [SerializeField] GameObject gameover;
 
     private Animator            m_animator;
     private Rigidbody2D         m_body2d;
+    private Vector3             pos;
     private Sensor_Prototype    m_groundSensor;
     private AudioSource         m_audioSource;
     private AudioManager_PrototypeHero m_audioManager;
@@ -25,18 +34,40 @@ public class PrototypeHeroDemo : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        pos=transform.position;
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         m_audioSource = GetComponent<AudioSource>();
         m_audioManager = AudioManager_PrototypeHero.instance;
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_Prototype>();
     }
-
+    public void kill()
+    {
+        if(life>1)
+        {
+            life--;
+            life_text.text="x"+life.ToString();
+            transform.position=pos;
+            health=100;
+        }
+        else
+        {
+            gameObject.SetActive(false);
+            gameover.gameObject.SetActive(true);
+            timer.transform.GetComponent<timetrail>().win();
+        }
+    }
     // Update is called once per frame
     void Update ()
     {
+
+        if (health <= 0)
+        {
+            kill();
+        }
         // Decrease timer that disables input movement. Used when attacking
         m_disableMovementTimer -= Time.deltaTime;
+        health_image.fillAmount=health/100;
 
         //Check if character just landed on the ground
         if (!m_grounded && m_groundSensor.State())
@@ -155,5 +186,16 @@ public class PrototypeHeroDemo : MonoBehaviour {
         m_audioManager.PlaySound("Landing");
         // Spawn Dust
         SpawnDustEffect(m_LandingDust);
+    }
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "enemy" )
+        {
+            other.gameObject.GetComponent<AI>().TakeDamage(100);
+        }
     }
 }

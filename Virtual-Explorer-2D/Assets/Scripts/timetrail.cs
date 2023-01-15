@@ -36,9 +36,7 @@ public class timetrail : MonoBehaviour
             timeText.text=string.Format("{0:0}:{1:00}",min,sec);
             if(timeleft==0)
             {
-                gameover=true;
-                gameoverscr.transform.gameObject.SetActive(true);
-                player.transform.gameObject.SetActive(false);
+                player.transform.GetComponent<PrototypeHeroDemo>().kill();
             }
         }
     }

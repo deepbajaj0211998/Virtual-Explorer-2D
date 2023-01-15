@@ -13,9 +13,7 @@ void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            loose.gameObject.SetActive(true);
-            other.transform.gameObject.SetActive(false);
-            timer.transform.GetComponent<timetrail>().win();
+            other.transform.GetComponent<PrototypeHeroDemo>().kill();
         }
     }
 
