@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-
     public GameObject DifficultyPanel;
     public GameObject OptionsPanel;
     public TextMeshProUGUI warningText;
@@ -49,7 +48,7 @@ public class MainMenuManager : MonoBehaviour
         }
         else
         {
-            Coin.totalCoins = PlayerPrefs.GetInt("NumberOfCoins", 0);
+            //int totalCoins = PlayerPrefs.GetInt("NumberOfCoins", 0);
             SceneManager.LoadScene("level1");
         }
     }
