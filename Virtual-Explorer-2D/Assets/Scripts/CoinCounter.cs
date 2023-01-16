@@ -16,10 +16,12 @@ public class CoinCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Set the current number of coins to display
-        if (counterText.text != Coin.totalCoins.ToString())
-        {
-            counterText.text = "x" + Coin.totalCoins.ToString();
-        }
+        int getcoins = PlayerPrefs.GetInt("NumberOfCoins");
+        counterText.text = getcoins.ToString();
+        ////Set the current number of coins to display
+        //if (counterText.text != coin.totalCoins.ToString())
+        //{
+        //    counterText.text = "x" + coin.totalCoins.ToString();
+        //}
     }
 }

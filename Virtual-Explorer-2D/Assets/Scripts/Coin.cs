@@ -5,7 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     //Keep track of total picked coins (Since the value is static, it can be accessed at "SC_2DCoin.totalCoins" from any script)
-    public static int totalCoins = 0;
+    public int totalCoins = 0;
 
     void Awake()
     {
@@ -15,6 +15,8 @@ public class Coin : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D c2d)
     {
+        int getCoins;
+        
         //Destroy the coin if Object tagged Player comes in contact with it
         if (c2d.CompareTag("Player"))
         {
@@ -24,6 +26,8 @@ public class Coin : MonoBehaviour
             Debug.Log("You currently have " + totalCoins + " Coins.");
             //Destroy coin
             Destroy(gameObject);
+            getCoins = PlayerPrefs.GetInt("NumberOfCoins");
+            PlayerPrefs.SetInt("NumberOfCoins", getCoins + 1);
         }
     }
 }
