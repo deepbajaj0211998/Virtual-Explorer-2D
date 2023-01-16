@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5ed8783eeee8f4d8462702dfc2391d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalCoins: 0
 --- !u!1 &29653468
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5ed8783eeee8f4d8462702dfc2391d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalCoins: 0
 --- !u!1001 &90938203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17764,6 +17766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5ed8783eeee8f4d8462702dfc2391d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalCoins: 0
 --- !u!1 &427064825
 GameObject:
   m_ObjectHideFlags: 0
@@ -17888,6 +17891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5ed8783eeee8f4d8462702dfc2391d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalCoins: 0
 --- !u!1 &438599830
 GameObject:
   m_ObjectHideFlags: 0
@@ -18682,12 +18686,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -18702,8 +18706,8 @@ Canvas:
   m_GameObject: {fileID: 607936027}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -25741,8 +25745,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -0.79999924, y: 0.7}
-  m_SizeDelta: {x: 13, y: 12}
+  m_AnchoredPosition: {x: -14.21, y: 0.00015163}
+  m_SizeDelta: {x: 28.43, y: 28.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1275609645
 MonoBehaviour:
@@ -26386,6 +26390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5ed8783eeee8f4d8462702dfc2391d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalCoins: 0
 --- !u!1 &1590107958
 GameObject:
   m_ObjectHideFlags: 0
@@ -27076,7 +27081,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 113.5, y: -21.4}
+  m_AnchoredPosition: {x: 113.5, y: -21.400002}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1860169160
@@ -27796,8 +27801,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -142.7, y: 65.8}
-  m_SizeDelta: {x: 50.7708, y: 8.1805}
+  m_AnchoredPosition: {x: -772.7, y: 508.2}
+  m_SizeDelta: {x: 147.86, y: 28.315}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1949710554
 MonoBehaviour:
@@ -28012,6 +28017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5ed8783eeee8f4d8462702dfc2391d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalCoins: 0
 --- !u!1 &2004626276
 GameObject:
   m_ObjectHideFlags: 0
