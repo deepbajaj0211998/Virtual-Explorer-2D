@@ -50,6 +50,9 @@ TagManager:
   - name: background_1
     uniqueID: 323302453
     locked: 0
+  - name: characters
+    uniqueID: 182444799
+    locked: 0
   - name: playerground
     uniqueID: 1958695289
     locked: 0
