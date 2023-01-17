@@ -9,6 +9,7 @@ public class MainMenuManager : MonoBehaviour
 {
     public GameObject DifficultyPanel;
     public GameObject OptionsPanel;
+    public GameObject QuitPanel;
     public TextMeshProUGUI warningText;
     public GameObject[] newGameObjects;
     public GameObject player;
@@ -56,6 +57,16 @@ public class MainMenuManager : MonoBehaviour
             SavedPos = new Vector3(PlayerPrefs.GetFloat("PlayerPosX"), PlayerPrefs.GetFloat("PlayerPosY"), player.transform.position.z);
             SceneManager.LoadScene("level1");
         }
+    }
+
+    public void QuitGame()
+    {
+        QuitPanel.SetActive(true);
+    }
+    
+    public void noExitGame()
+    {
+        QuitPanel.SetActive(false);
     }
 
     IEnumerator WaitForSeonds2()
