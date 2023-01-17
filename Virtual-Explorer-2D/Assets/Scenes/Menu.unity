@@ -160,6 +160,9 @@ MonoBehaviour:
   - {fileID: 1490461921}
   - {fileID: 1348890712}
   - {fileID: 825971480}
+  player: {fileID: 8494926765198414067, guid: 81358268dd4951348ab5f94c0db6d1a6, type: 3}
+  SavedPos: {x: 0, y: 0, z: 0}
+  playerController: {fileID: 8494926765198414072, guid: 81358268dd4951348ab5f94c0db6d1a6, type: 3}
 --- !u!4 &50650156
 Transform:
   m_ObjectHideFlags: 0
