@@ -2039,7 +2039,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277008937}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -26958,7 +26958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5126507520524490402, guid: e481822248898d04e9808a3d3ca78e5a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5779919143759674799, guid: e481822248898d04e9808a3d3ca78e5a, type: 3}
       propertyPath: timer
@@ -28630,7 +28630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8494926765198414067, guid: 81358268dd4951348ab5f94c0db6d1a6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8494926765198414072, guid: 81358268dd4951348ab5f94c0db6d1a6, type: 3}
       propertyPath: timer
@@ -28646,7 +28646,7 @@ PrefabInstance:
       objectReference: {fileID: 1860169160}
     - target: {fileID: 8494926765198414072, guid: 81358268dd4951348ab5f94c0db6d1a6, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8494926765198414072, guid: 81358268dd4951348ab5f94c0db6d1a6, type: 3}
       propertyPath: health_image

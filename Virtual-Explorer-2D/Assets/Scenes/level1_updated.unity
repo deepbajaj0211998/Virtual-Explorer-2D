@@ -363,7 +363,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 612034609
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -18420,7 +18420,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 612034609
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -18609,7 +18609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4693913698758252487, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4693913698758252487, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
       propertyPath: m_SortingLayerID
@@ -18689,7 +18689,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -866524291
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -19326,7 +19326,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1958695289
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -77172,7 +77172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4693913698758252487, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4693913698758252487, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
       propertyPath: m_SortingLayerID
@@ -94720,7 +94720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4693913698758252487, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4693913698758252487, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
       propertyPath: m_SortingLayerID
@@ -94884,7 +94884,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1397473369
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -101091,7 +101091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4693913698758252487, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4693913698758252487, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
       propertyPath: m_SortingLayerID
@@ -103135,7 +103135,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4041983829798186269, guid: e481822248898d04e9808a3d3ca78e5a, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4041983829798186269, guid: e481822248898d04e9808a3d3ca78e5a, type: 3}
       propertyPath: m_SortingOrder

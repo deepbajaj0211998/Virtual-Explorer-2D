@@ -41,13 +41,17 @@ public class PrototypeHeroDemo : MonoBehaviour {
         m_audioManager = AudioManager_PrototypeHero.instance;
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_Prototype>();
     }
+
+
     public void kill()
     {
         if(life>1)
         {
+            float safePointX = PlayerPrefs.GetFloat("positonX");
+            float safePointY = PlayerPrefs.GetFloat("positonY");
             life--;
             life_text.text="x"+life.ToString();
-            transform.position=pos;
+            transform.position = new Vector3(safePointX, safePointY + 0.6f, 0);
             health=100;
         }
         else
@@ -67,7 +71,7 @@ public class PrototypeHeroDemo : MonoBehaviour {
         }
         // Decrease timer that disables input movement. Used when attacking
         m_disableMovementTimer -= Time.deltaTime;
-        health_image.fillAmount=health/100;
+        //health_image.fillAmount=health/100;
 
         //Check if character just landed on the ground
         if (!m_grounded && m_groundSensor.State())
