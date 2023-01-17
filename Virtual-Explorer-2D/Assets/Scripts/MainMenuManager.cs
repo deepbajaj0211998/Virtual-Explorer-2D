@@ -11,6 +11,9 @@ public class MainMenuManager : MonoBehaviour
     public GameObject OptionsPanel;
     public TextMeshProUGUI warningText;
     public GameObject[] newGameObjects;
+    public GameObject player;
+    public Vector3 SavedPos;
+    public PlayerController playerController;
 
     public void OnClick_NewGame()
 	{
@@ -49,6 +52,8 @@ public class MainMenuManager : MonoBehaviour
         else
         {
             //int totalCoins = PlayerPrefs.GetInt("NumberOfCoins", 0);
+            playerController.isLoadedFromSaved = true;
+            SavedPos = new Vector3(PlayerPrefs.GetFloat("PlayerPosX"), PlayerPrefs.GetFloat("PlayerPosY"), player.transform.position.z);
             SceneManager.LoadScene("level1");
         }
     }
