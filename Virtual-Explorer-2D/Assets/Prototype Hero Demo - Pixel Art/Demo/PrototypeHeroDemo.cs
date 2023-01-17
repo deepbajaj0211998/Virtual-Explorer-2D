@@ -57,6 +57,11 @@ public class PrototypeHeroDemo : MonoBehaviour {
             timer.transform.GetComponent<timetrail>().win();
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
     // Update is called once per frame
     void Update ()
     {
