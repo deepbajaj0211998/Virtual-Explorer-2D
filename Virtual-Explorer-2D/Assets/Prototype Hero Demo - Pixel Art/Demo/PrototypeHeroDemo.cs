@@ -43,12 +43,15 @@ public class PrototypeHeroDemo : MonoBehaviour {
     }
     public void kill()
     {
-        if(life>1)
+        if (life > 1)
         {
+            float z = PlayerPrefs.GetFloat("PlayerPosZ");
+            float x = PlayerPrefs.GetFloat("PlayerPosX");
+            float y = PlayerPrefs.GetFloat("PlayerPosY");
             life--;
-            life_text.text="x"+life.ToString();
-            transform.position=pos;
-            health=100;
+            life_text.text = "x" + life.ToString();
+            transform.localPosition = new Vector3(x, y, z);
+            health = 100;
         }
         else
         {
