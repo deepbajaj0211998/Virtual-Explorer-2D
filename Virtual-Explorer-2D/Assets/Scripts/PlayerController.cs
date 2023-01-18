@@ -61,9 +61,12 @@ public class PlayerController : MonoBehaviour
     {
         if (life > 1)
         {
+            float z = PlayerPrefs.GetFloat("PlayerPosZ");
+            float x = PlayerPrefs.GetFloat("PlayerPosX");
+            float y = PlayerPrefs.GetFloat("PlayerPosY");
             life--;
             life_text.text = "x" + life.ToString();
-            transform.position = pos;
+            transform.localPosition = new Vector3(x, y, z);
             health = 100;
         }
         else
