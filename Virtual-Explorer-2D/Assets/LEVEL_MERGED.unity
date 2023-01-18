@@ -381,6 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5ed8783eeee8f4d8462702dfc2391d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalCoins: 0
 --- !u!1 &29653468
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5ed8783eeee8f4d8462702dfc2391d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalCoins: 0
 --- !u!1 &46005616
 GameObject:
   m_ObjectHideFlags: 0
@@ -2597,7 +2599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8cf1eab4fcefd240adc30cec1bceb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loose: {fileID: 1880172408}
+  win: {fileID: 0}
   timer: {fileID: 450128193}
 --- !u!61 &175110850
 BoxCollider2D:
@@ -37762,6 +37764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5ed8783eeee8f4d8462702dfc2391d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalCoins: 0
 --- !u!1 &427064825
 GameObject:
   m_ObjectHideFlags: 0
@@ -37886,6 +37889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5ed8783eeee8f4d8462702dfc2391d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalCoins: 0
 --- !u!1 &431488348
 GameObject:
   m_ObjectHideFlags: 0
@@ -37931,7 +37935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8cf1eab4fcefd240adc30cec1bceb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loose: {fileID: 1880172408}
+  win: {fileID: 0}
   timer: {fileID: 450128193}
 --- !u!61 &431488351
 BoxCollider2D:
@@ -38886,7 +38890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8cf1eab4fcefd240adc30cec1bceb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loose: {fileID: 1195190807}
+  win: {fileID: 0}
   timer: {fileID: 450128193}
 --- !u!1 &475895685
 GameObject:
@@ -39015,6 +39019,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -39150,7 +39155,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1829099253}
   timeOffset: 5
-  posOffset: {x: 6, y: 0}
+  posOffset: {x: 11, y: 0}
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7929e28b1f11d479d3b8adea42aa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels:
+  - {fileID: 889096733}
+  - {fileID: 197218416}
 --- !u!1 &524463627
 GameObject:
   m_ObjectHideFlags: 0
@@ -64680,7 +64700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8cf1eab4fcefd240adc30cec1bceb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loose: {fileID: 1880172408}
+  win: {fileID: 0}
   timer: {fileID: 450128193}
 --- !u!4 &1030826620 stripped
 Transform:
@@ -64818,7 +64838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8cf1eab4fcefd240adc30cec1bceb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loose: {fileID: 1880172408}
+  win: {fileID: 0}
   timer: {fileID: 450128193}
 --- !u!61 &1065029401
 BoxCollider2D:
@@ -72298,7 +72318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8cf1eab4fcefd240adc30cec1bceb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loose: {fileID: 1880172408}
+  win: {fileID: 0}
   timer: {fileID: 450128193}
 --- !u!61 &1373929083
 BoxCollider2D:
@@ -72371,7 +72391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8cf1eab4fcefd240adc30cec1bceb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loose: {fileID: 1880172408}
+  win: {fileID: 0}
   timer: {fileID: 450128193}
 --- !u!61 &1397546420
 BoxCollider2D:
@@ -72694,7 +72714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8cf1eab4fcefd240adc30cec1bceb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loose: {fileID: 1195190807}
+  win: {fileID: 0}
   timer: {fileID: 450128193}
 --- !u!1 &1497741199
 GameObject:
@@ -130255,6 +130275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5ed8783eeee8f4d8462702dfc2391d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalCoins: 0
 --- !u!1 &1581152941
 GameObject:
   m_ObjectHideFlags: 0
@@ -133273,6 +133294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5ed8783eeee8f4d8462702dfc2391d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalCoins: 0
 --- !u!1 &1975382375
 GameObject:
   m_ObjectHideFlags: 0
@@ -133534,7 +133556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8cf1eab4fcefd240adc30cec1bceb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loose: {fileID: 1880172408}
+  win: {fileID: 0}
   timer: {fileID: 450128193}
 --- !u!61 &2013944955
 BoxCollider2D:
@@ -133790,7 +133812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8cf1eab4fcefd240adc30cec1bceb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loose: {fileID: 1195190807}
+  win: {fileID: 0}
   timer: {fileID: 450128193}
 --- !u!61 &2045662090
 BoxCollider2D:
