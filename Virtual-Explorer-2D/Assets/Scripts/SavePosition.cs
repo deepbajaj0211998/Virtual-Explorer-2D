@@ -28,17 +28,17 @@ public class SavePosition : MonoBehaviour
             Y = PlayerLocation.position.y;
 
 
-            PlayerPrefs.SetInt("Player_Z_Cord", (int)Z);
+            PlayerPrefs.GetFloat("Player_Z_Cord", (float)Z);
 
-            PlayerPrefs.SetInt("Player_X_Cord", (int)X);
+            PlayerPrefs.GetFloat("Player_X_Cord", (float)X);
 
-            PlayerPrefs.SetInt("Player_Y_Cord", (int)Y);
+            PlayerPrefs.GetFloat("Player_Y_Cord", (float)Y);
 
-            CordsStored.z = PlayerPrefs.GetInt("Player_Z_Cord");
+            CordsStored.z = PlayerPrefs.GetFloat("Player_Z_Cord");
 
-            CordsStored.x = PlayerPrefs.GetInt("Player_X_Cord");
+            CordsStored.x = PlayerPrefs.GetFloat("Player_X_Cord");
 
-            CordsStored.y = PlayerPrefs.GetInt("Player_Y_Cord");
+            CordsStored.y = PlayerPrefs.GetFloat("Player_Y_Cord");
             PlayerPrefs.Save();
             Debug.Log(X + " " + Z + " " + Y);
         }
