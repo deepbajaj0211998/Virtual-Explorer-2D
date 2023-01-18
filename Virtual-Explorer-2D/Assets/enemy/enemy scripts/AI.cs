@@ -68,7 +68,7 @@ public class AI : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+            collision.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
         }
     }
 
