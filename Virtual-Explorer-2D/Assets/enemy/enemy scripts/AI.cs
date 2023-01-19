@@ -64,11 +64,12 @@ public class AI : MonoBehaviour
         //player.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
     }
 
-    void OnCollisionStay2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && other.gameObject.GetType()==typeof(CapsuleCollider2D))
         {
-            collision.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
+            other.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+            other.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
         }
     }
 
