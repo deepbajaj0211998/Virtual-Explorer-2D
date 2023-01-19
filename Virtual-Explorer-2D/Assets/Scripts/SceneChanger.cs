@@ -23,7 +23,7 @@ public class SceneChanger : MonoBehaviour
             }
             else
             {
-                other.transform.GetComponent<PlayerController>().kill();
+                other.transform.GetComponent<PrototypeHeroDemo>().kill();
             }
         }
 

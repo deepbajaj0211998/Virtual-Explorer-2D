@@ -40,10 +40,20 @@ public class AI : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            health=1;
+            transform.GetChild(0).transform.GetComponent<ParticleSystem>().Play();
+            GetComponent<SpriteRenderer>().enabled=false;
+            GetComponent<BoxCollider2D>().enabled=false;
+            GetComponent<CapsuleCollider2D>().enabled=false;
+            StartCoroutine(nameof(waiting));
         }
     }
+    IEnumerator waiting()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
 
+    }
     void Patrol()
     {
         transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPatrolPoint].position, patrolSpeed * Time.deltaTime);
@@ -61,19 +71,22 @@ public class AI : MonoBehaviour
     void Attack()
     {
         // Play attack animation
-        //player.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
     }
 
-    void OnCollisionStay2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && other is CapsuleCollider2D)
         {
-            collision.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
+            GetComponent<Animator>().SetTrigger("attack");
+            //other.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+            other.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
         }
     }
 
     public void TakeDamage(int damage)
     {
+        if(health>0)
         health -= damage;
+        
     }
 }
