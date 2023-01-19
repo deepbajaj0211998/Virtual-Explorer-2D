@@ -125,7 +125,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.375, y: 9.375}
+    oldSize: {x: 10.714286, y: 10.714286}
     newSize: {x: 9.375, y: 9.375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   patrolPoints: []
   patrolSpeed: 2
   attackRange: 1.5
-  damage: 10
+  damage: 30
   health: 100
 --- !u!61 &683294346513470206
 BoxCollider2D:
@@ -168,7 +168,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.375, y: 9.375}
+    oldSize: {x: 10.714286, y: 10.714286}
     newSize: {x: 9.375, y: 9.375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

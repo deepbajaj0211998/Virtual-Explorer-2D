@@ -75,7 +75,7 @@ public class PrototypeHeroDemo : MonoBehaviour {
         }
         // Decrease timer that disables input movement. Used when attacking
         m_disableMovementTimer -= Time.deltaTime;
-        health_image.fillAmount=health/100;
+        health_image.GetComponent<Slider>().value=health/100;
 
         //Check if character just landed on the ground
         if (!m_grounded && m_groundSensor.State())

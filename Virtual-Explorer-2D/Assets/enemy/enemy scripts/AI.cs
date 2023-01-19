@@ -24,8 +24,8 @@ public class AI : MonoBehaviour
     {
         if (!isAttacking)
         {
-            Patrol();
         }
+            Patrol();
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         if (distanceToPlayer <= attackRange)
@@ -66,7 +66,7 @@ public class AI : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && other.gameObject.GetType()==typeof(CapsuleCollider2D))
+        if (other.gameObject.CompareTag("Player") && other.GetComponent<Collider2D>() is CapsuleCollider2D)
         {
             other.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
             other.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
