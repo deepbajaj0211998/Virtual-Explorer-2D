@@ -31,7 +31,7 @@ public class SpikesActivation : MonoBehaviour
 
     IEnumerator SpikesUp()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         if (!isSpikeUp)
         {
             spikes.transform.localPosition = new Vector3(0, spikesMovementUp, 0);

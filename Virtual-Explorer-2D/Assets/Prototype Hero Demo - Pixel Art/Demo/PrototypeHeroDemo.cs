@@ -201,7 +201,7 @@ public class PrototypeHeroDemo : MonoBehaviour {
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "enemy" )
+        if (other.gameObject.tag == "enemy"  && other is CapsuleCollider2D)
         {
             other.gameObject.GetComponent<AI>().TakeDamage(100);
         }

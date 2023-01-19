@@ -24,8 +24,8 @@ public class AI : MonoBehaviour
     {
         if (!isAttacking)
         {
-        }
             Patrol();
+        }
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         if (distanceToPlayer <= attackRange)
@@ -40,10 +40,20 @@ public class AI : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            health=1;
+            transform.GetChild(0).transform.GetComponent<ParticleSystem>().Play();
+            GetComponent<SpriteRenderer>().enabled=false;
+            GetComponent<BoxCollider2D>().enabled=false;
+            GetComponent<CapsuleCollider2D>().enabled=false;
+            StartCoroutine(nameof(waiting));
         }
     }
+    IEnumerator waiting()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
 
+    }
     void Patrol()
     {
         transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPatrolPoint].position, patrolSpeed * Time.deltaTime);
@@ -61,20 +71,22 @@ public class AI : MonoBehaviour
     void Attack()
     {
         // Play attack animation
-        //player.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && other.GetComponent<Collider2D>() is CapsuleCollider2D)
+        if (other.gameObject.CompareTag("Player") && other is CapsuleCollider2D)
         {
-            other.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+            GetComponent<Animator>().SetTrigger("attack");
+            //other.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
             other.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
         }
     }
 
     public void TakeDamage(int damage)
     {
+        if(health>0)
         health -= damage;
+        
     }
 }
