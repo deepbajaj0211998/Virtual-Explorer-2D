@@ -22,6 +22,7 @@ public class fallingplatform : MonoBehaviour
         time+=Time.deltaTime;
         if(time>totaltime)
         {
+            GetComponent<CapsuleCollider2D>().enabled=false;
             transform.GetChild(0).transform.gameObject.SetActive(false);
             StartCoroutine(wait());
         }
@@ -29,6 +30,7 @@ public class fallingplatform : MonoBehaviour
     IEnumerator wait()
     {
         yield return new WaitForSeconds(2);
+        GetComponent<CapsuleCollider2D>().enabled=true;
         transform.GetChild(0).transform.gameObject.SetActive(true);
         time=0f;
     }

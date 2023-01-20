@@ -14,6 +14,7 @@ public class AI : MonoBehaviour
     private int currentPatrolPoint = 0;
     private Transform player;
     private bool isAttacking = false;
+    public GameObject kill_effect;
 
     void Start()
     {
@@ -24,8 +25,8 @@ public class AI : MonoBehaviour
     {
         if (!isAttacking)
         {
-            Patrol();
         }
+            Patrol();
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         if (distanceToPlayer <= attackRange)
@@ -38,22 +39,13 @@ public class AI : MonoBehaviour
             isAttacking = false;
         }
 
-        if (health <= 0)
+        if (health == 0)
         {
-            health=1;
-            transform.GetChild(0).transform.GetComponent<ParticleSystem>().Play();
-            GetComponent<SpriteRenderer>().enabled=false;
-            GetComponent<BoxCollider2D>().enabled=false;
-            GetComponent<CapsuleCollider2D>().enabled=false;
-            StartCoroutine(nameof(waiting));
+            Instantiate(kill_effect,transform.position,Quaternion.identity);
+            Destroy(gameObject);
         }
     }
-    IEnumerator waiting()
-    {
-        yield return new WaitForSeconds(1f);
-        Destroy(gameObject);
-
-    }
+    
     void Patrol()
     {
         transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPatrolPoint].position, patrolSpeed * Time.deltaTime);
