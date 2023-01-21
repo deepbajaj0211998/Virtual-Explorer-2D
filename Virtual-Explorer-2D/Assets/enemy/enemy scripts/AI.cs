@@ -7,14 +7,16 @@ public class AI : MonoBehaviour
 {
     public Transform[] patrolPoints;
     public float patrolSpeed = 2f;
-    public float attackRange = 1.5f;
+    public float attackRange = .5f;
     public int damage = 10;
     public int health = 100;
+    public float timeBetweenAttacks = 0.5f;
+    public float timeLastAttack = 0f;
 
     private int currentPatrolPoint = 0;
     private Transform player;
     private bool isAttacking = false;
-
+    public GameObject kill_effect;
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
@@ -40,31 +42,27 @@ public class AI : MonoBehaviour
 
         if (health <= 0)
         {
-            health=1;
-            transform.GetChild(0).transform.GetComponent<ParticleSystem>().Play();
-            GetComponent<SpriteRenderer>().enabled=false;
-            GetComponent<BoxCollider2D>().enabled=false;
-            GetComponent<CapsuleCollider2D>().enabled=false;
-            StartCoroutine(nameof(waiting));
+            Instantiate(kill_effect,transform.position,Quaternion.identity);
+            Destroy(gameObject);
         }
     }
-    IEnumerator waiting()
-    {
-        yield return new WaitForSeconds(1f);
-        Destroy(gameObject);
-
-    }
+    
     void Patrol()
     {
         transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPatrolPoint].position, patrolSpeed * Time.deltaTime);
 
         if (Vector2.Distance(transform.position, patrolPoints[currentPatrolPoint].position) < 0.1f)
         {
+            if(GetComponent<SpriteRenderer>().flipX==true)
+                GetComponent<SpriteRenderer>().flipX=false;
+            else
+                GetComponent<SpriteRenderer>().flipX=true;
             currentPatrolPoint++;
             if (currentPatrolPoint >= patrolPoints.Length)
             {
                 currentPatrolPoint = 0;
             }
+            
         }
     }
 
@@ -75,11 +73,18 @@ public class AI : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && other is CapsuleCollider2D)
+        if (other.gameObject.CompareTag("Player"))
         {
-            GetComponent<Animator>().SetTrigger("attack");
-            //other.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
-            other.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
+            if(other is CapsuleCollider2D)
+            {
+                if (Time.time > timeLastAttack + timeBetweenAttacks)
+                {
+                    GetComponent<Animator>().SetTrigger("attack");
+                    //other.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+                    other.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
+                    timeLastAttack = Time.time;
+                }
+            }  
         }
     }
 

@@ -9,6 +9,7 @@ TagManager:
   - enemy
   - WinCanvas
   - SaveData_CheckPoint
+  - kill
   layers:
   - Default
   - TransparentFX

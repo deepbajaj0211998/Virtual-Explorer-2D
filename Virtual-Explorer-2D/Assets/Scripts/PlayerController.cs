@@ -184,12 +184,12 @@ public class PlayerController : MonoBehaviour
         health -= damage;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    /*void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "enemy")
         {
             other.gameObject.GetComponent<AI>().TakeDamage(100);
         }
-    }
+    }*/
 
 }
