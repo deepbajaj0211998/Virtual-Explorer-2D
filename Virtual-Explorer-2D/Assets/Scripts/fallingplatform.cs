@@ -22,12 +22,14 @@ public class fallingplatform : MonoBehaviour
         time+=Time.deltaTime;
         if(time>totaltime)
         {
+            GetComponent<CapsuleCollider2D>().enabled=false;
             transform.GetChild(0).transform.gameObject.SetActive(false);
             StartCoroutine(wait());
         }
     }
     IEnumerator wait()
     {
+        GetComponent<CapsuleCollider2D>().enabled=true;
         yield return new WaitForSeconds(2);
         transform.GetChild(0).transform.gameObject.SetActive(true);
         time=0f;
