@@ -45,8 +45,9 @@ public class PrototypeHeroDemo : MonoBehaviour {
     }
     public IEnumerator kill()
     {
-        
-
+        GetComponent<SpriteRenderer>().enabled=false;
+        Instantiate(kill_effect,transform.position,Quaternion.identity);
+        alive=false;
         yield return new WaitForSeconds(2f);
         if (life > 1)
         {
@@ -76,10 +77,9 @@ public class PrototypeHeroDemo : MonoBehaviour {
         {
             if (health <= 0)
             {
-                GetComponent<SpriteRenderer>().enabled=false;
-                Instantiate(kill_effect,transform.position,Quaternion.identity);
+                
                 StartCoroutine(kill());
-                alive=false;
+                
             }
             // Decrease timer that disables input movement. Used when attacking
             m_disableMovementTimer -= Time.deltaTime;
