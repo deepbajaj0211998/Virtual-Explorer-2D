@@ -567,6 +567,10 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 285259743}
+    - target: {fileID: 9113519735939121707, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
+      propertyPath: cinema
+      value: 
+      objectReference: {fileID: 1818917569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
 --- !u!1 &120461646
@@ -22522,6 +22526,10 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 56848310}
+    - target: {fileID: 9113519735939121707, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
+      propertyPath: cinema
+      value: 
+      objectReference: {fileID: 1818917569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
 --- !u!4 &366607474 stripped
@@ -39710,6 +39718,10 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 1283943661}
+    - target: {fileID: 9113519735939121707, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
+      propertyPath: cinema
+      value: 
+      objectReference: {fileID: 1818917569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
 --- !u!4 &585463132 stripped
@@ -39998,6 +40010,10 @@ PrefabInstance:
       propertyPath: prototypeHero
       value: 
       objectReference: {fileID: 1829099267}
+    - target: {fileID: 8861239402545377246, guid: b8eb7888e4dabf048904b1dd25a92007, type: 3}
+      propertyPath: spikesMovementUp
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8eb7888e4dabf048904b1dd25a92007, type: 3}
 --- !u!4 &634103068 stripped
@@ -40201,6 +40217,10 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 744366171}
+    - target: {fileID: 9113519735939121707, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
+      propertyPath: cinema
+      value: 
+      objectReference: {fileID: 1818917569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
 --- !u!4 &675965670 stripped
@@ -40686,6 +40706,10 @@ PrefabInstance:
     - target: {fileID: 7284673568036372814, guid: cf339eae1265a68449028a0a50d2d8f7, type: 3}
       propertyPath: up_time
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7284673568036372814, guid: cf339eae1265a68449028a0a50d2d8f7, type: 3}
+      propertyPath: spikesMovementUp
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7284673568036372849, guid: cf339eae1265a68449028a0a50d2d8f7, type: 3}
       propertyPath: m_RootOrder
@@ -57897,6 +57921,10 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 1296415208}
+    - target: {fileID: 9113519735939121707, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
+      propertyPath: cinema
+      value: 
+      objectReference: {fileID: 1818917569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
 --- !u!1 &849901613
@@ -64089,6 +64117,10 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 700135185}
+    - target: {fileID: 9113519735939121707, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
+      propertyPath: cinema
+      value: 
+      objectReference: {fileID: 1818917569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
 --- !u!1 &970982249
@@ -64795,6 +64827,10 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 1781112088}
+    - target: {fileID: 9113519735939121707, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
+      propertyPath: cinema
+      value: 
+      objectReference: {fileID: 1818917569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
 --- !u!1001 &1074693578
@@ -64876,6 +64912,10 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 2084015977}
+    - target: {fileID: 9113519735939121707, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
+      propertyPath: cinema
+      value: 
+      objectReference: {fileID: 1818917569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
 --- !u!1 &1081291626
@@ -65897,6 +65937,10 @@ PrefabInstance:
       propertyPath: up_time
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 7284673568036372814, guid: cf339eae1265a68449028a0a50d2d8f7, type: 3}
+      propertyPath: spikesMovementUp
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7284673568036372849, guid: cf339eae1265a68449028a0a50d2d8f7, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -66411,6 +66455,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7284673568036372814, guid: cf339eae1265a68449028a0a50d2d8f7, type: 3}
       propertyPath: up_time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7284673568036372814, guid: cf339eae1265a68449028a0a50d2d8f7, type: 3}
+      propertyPath: spikesMovementUp
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7284673568036372849, guid: cf339eae1265a68449028a0a50d2d8f7, type: 3}
@@ -72228,6 +72276,10 @@ PrefabInstance:
       propertyPath: prototypeHero
       value: 
       objectReference: {fileID: 1829099267}
+    - target: {fileID: 8861239402545377246, guid: b8eb7888e4dabf048904b1dd25a92007, type: 3}
+      propertyPath: spikesMovementUp
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8eb7888e4dabf048904b1dd25a92007, type: 3}
 --- !u!4 &1386020166 stripped
@@ -129701,6 +129753,10 @@ PrefabInstance:
       propertyPath: up_time
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7284673568036372814, guid: cf339eae1265a68449028a0a50d2d8f7, type: 3}
+      propertyPath: spikesMovementUp
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7284673568036372849, guid: cf339eae1265a68449028a0a50d2d8f7, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -130288,6 +130344,10 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 172179379}
+    - target: {fileID: 9113519735939121707, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
+      propertyPath: cinema
+      value: 
+      objectReference: {fileID: 1818917569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
 --- !u!4 &1591033535 stripped
@@ -130676,6 +130736,10 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 549592745}
+    - target: {fileID: 9113519735939121707, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
+      propertyPath: cinema
+      value: 
+      objectReference: {fileID: 1818917569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
 --- !u!1 &1631736473
@@ -131889,6 +131953,10 @@ PrefabInstance:
       propertyPath: health_image
       value: 
       objectReference: {fileID: 1949710555}
+    - target: {fileID: 5779919143759674799, guid: e481822248898d04e9808a3d3ca78e5a, type: 3}
+      propertyPath: damage_effect
+      value: 
+      objectReference: {fileID: 7326792513202242936, guid: 6f80da89b508e1b4bb1003b12ff030a5, type: 3}
     - target: {fileID: 7216317338779392757, guid: e481822248898d04e9808a3d3ca78e5a, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -132523,6 +132591,10 @@ PrefabInstance:
       propertyPath: prototypeHero
       value: 
       objectReference: {fileID: 1829099267}
+    - target: {fileID: 8861239402545377246, guid: b8eb7888e4dabf048904b1dd25a92007, type: 3}
+      propertyPath: spikesMovementUp
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8eb7888e4dabf048904b1dd25a92007, type: 3}
 --- !u!4 &1865333523 stripped
@@ -134447,6 +134519,10 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 1593349144}
+    - target: {fileID: 9113519735939121707, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
+      propertyPath: cinema
+      value: 
+      objectReference: {fileID: 1818917569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60496f4096c220d4c8b3f603980868f7, type: 3}
 --- !u!4 &2021998339 stripped

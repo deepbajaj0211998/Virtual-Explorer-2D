@@ -12,7 +12,7 @@ public class AI : MonoBehaviour
     public int health = 100;
     public float timeBetweenAttacks = 0.5f;
     public float timeLastAttack = 0f;
-
+    
     private int currentPatrolPoint = 0;
     private Transform player;
     private bool isAttacking = false;
@@ -83,11 +83,12 @@ public class AI : MonoBehaviour
                     //other.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
                     other.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
                     timeLastAttack = Time.time;
+                    
                 }
             }  
         }
     }
-
+    
     public void TakeDamage(int damage)
     {
         if(health>0)

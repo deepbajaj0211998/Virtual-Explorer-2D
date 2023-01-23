@@ -149,6 +149,7 @@ MonoBehaviour:
   spawnTime: 10
   speed: 2
   chase: 0
+  kill_effect: {fileID: 3152874756536751965, guid: 646bb25ca5261564fadc06220a690514, type: 3}
 --- !u!1 &5791071836190388621
 GameObject:
   m_ObjectHideFlags: 0
