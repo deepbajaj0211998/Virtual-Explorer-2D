@@ -8,6 +8,7 @@ public class enemy2 : MonoBehaviour
     //public int touchDamage = 100; // Damage dealt to player upon touch
     public float speed = 2f; // Speed at which the enemy will follow the player
     public bool chase;
+    public GameObject kill_effect;
     private Transform player; // Reference to the player's transform
 
     void Start()
@@ -37,6 +38,7 @@ public class enemy2 : MonoBehaviour
         {
             // Apply damage to the player if the enemy touches the player
             other.transform.GetComponent<PrototypeHeroDemo>().kill();
+            Instantiate(kill_effect,transform.position,Quaternion.identity);
             Destroy(gameObject);
         }
     }
