@@ -6,15 +6,15 @@ using System.Collections;
 public class PrototypeHeroDemo : MonoBehaviour {
 
     [Header("Variables")]
-    [SerializeField] float      m_maxSpeed = 4.5f;
-    [SerializeField] float      health = 100f;
+    public float m_maxSpeed = 4.5f;
+    public float health = 100f;
     [SerializeField] float      m_jumpForce = 7.5f;
     [SerializeField] bool       m_hideSword = false;
     public bool alive=true;
     private int life=3;
     [Header("Effects")]
     [SerializeField] GameObject m_RunStopDust;
-    [SerializeField] Image health_image;
+    public Image health_image;
     [SerializeField] TextMeshProUGUI life_text;
     [SerializeField] GameObject m_JumpDust;
     [SerializeField] GameObject m_LandingDust;
