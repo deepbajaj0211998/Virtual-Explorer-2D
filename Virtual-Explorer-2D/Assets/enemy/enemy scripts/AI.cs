@@ -44,6 +44,8 @@ public class AI : MonoBehaviour
         {
             Instantiate(kill_effect,transform.position,Quaternion.identity);
             Destroy(gameObject);
+            int killCount = PlayerPrefs.GetInt("KillCount");
+            PlayerPrefs.SetInt("KillCount", killCount + 1);
         }
     }
     
