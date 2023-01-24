@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpeedParticle : MonoBehaviour
 {
-    public GameObject particleSystem;
+    public GameObject particlesystem;
     private float horizontal;
 
     private void Update()
@@ -12,11 +12,11 @@ public class SpeedParticle : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         if(horizontal > 0.5)
         {
-            particleSystem.SetActive(true);
+            particlesystem.SetActive(true);
         }
         else
         {
-            particleSystem.SetActive(true);
+            particlesystem.SetActive(true);
         }
     }
 }
