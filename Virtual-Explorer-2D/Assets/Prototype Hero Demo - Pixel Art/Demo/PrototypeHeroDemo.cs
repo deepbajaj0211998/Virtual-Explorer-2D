@@ -20,6 +20,7 @@ public class PrototypeHeroDemo : MonoBehaviour {
     [SerializeField] GameObject m_LandingDust;
     [SerializeField] GameObject timer;
     [SerializeField] GameObject gameover;
+    [SerializeField] GameObject total_enemy;
 
     private Animator            m_animator;
     private Rigidbody2D         m_body2d;
@@ -29,6 +30,7 @@ public class PrototypeHeroDemo : MonoBehaviour {
     private AudioManager_PrototypeHero m_audioManager;
     private bool                m_grounded = false;
     private bool                m_moving = false;
+    public bool can_win=false;
     private int                 m_facingDirection = 1;
     private float               m_disableMovementTimer = 0.0f;
     public GameObject kill_effect;
@@ -80,6 +82,10 @@ public class PrototypeHeroDemo : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
+        if(total_enemy.transform.childCount==0)
+        {
+            can_win=true;
+        }
         if(alive==true)
         {
             if (health <= 0)
