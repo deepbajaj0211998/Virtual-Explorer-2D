@@ -34,9 +34,10 @@ public class timetrail : MonoBehaviour
             int min =Mathf.FloorToInt(timeleft/60);
             int sec =Mathf.FloorToInt(timeleft-min*60);
             timeText.text=string.Format("{0:0}:{1:00}",min,sec);
-            if(timeleft==0)
+            if(timeleft<2)
             {
-                player.transform.GetComponent<PrototypeHeroDemo>().kill();
+                gameover=true;
+                StartCoroutine(player.transform.GetComponent<PrototypeHeroDemo>().kill());
             }
         }
     }
