@@ -36,6 +36,10 @@ public class PrototypeHeroDemo : MonoBehaviour {
     public GameObject kill_effect;
     public GameObject damage_effect;
 
+    public bool godMode = false;
+
+    private SpriteRenderer spriteRenderer;
+
     // Use this for initialization
     void Start ()
     {
@@ -45,39 +49,50 @@ public class PrototypeHeroDemo : MonoBehaviour {
         m_audioSource = GetComponent<AudioSource>();
         m_audioManager = AudioManager_PrototypeHero.instance;
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_Prototype>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     public IEnumerator kill()
     {
-        GetComponent<SpriteRenderer>().enabled=false;
-        GetComponent<BoxCollider2D>().enabled=false;
-        GetComponent<CapsuleCollider2D>().enabled=false;
-        GetComponent<Rigidbody2D>().bodyType=RigidbodyType2D.Static;
-        Instantiate(kill_effect,transform.position,Quaternion.identity);
-        alive=false;
-        yield return new WaitForSeconds(2f);
-        if (life > 1)
+        if (!godMode)
         {
-            float z = PlayerPrefs.GetFloat("PlayerPosZ");
-            float x = PlayerPrefs.GetFloat("PlayerPosX");
-            float y = PlayerPrefs.GetFloat("PlayerPosY");
-            life--;
-            life_text.text = "x" + life.ToString();
-            transform.localPosition = new Vector3(x, y, z);
-            health = 100;
-            alive=true;
-            GetComponent<SpriteRenderer>().enabled=true;
-            GetComponent<BoxCollider2D>().enabled=true;
-            GetComponent<CapsuleCollider2D>().enabled=true;
-            GetComponent<Rigidbody2D>().bodyType=RigidbodyType2D.Dynamic;
-        }
-        else
-        {
-            gameObject.SetActive(false);
-            gameover.gameObject.SetActive(true);
-            timer.transform.GetComponent<timetrail>().win();
+            GetComponent<SpriteRenderer>().enabled=false;
+            GetComponent<BoxCollider2D>().enabled=false;
+            GetComponent<CapsuleCollider2D>().enabled=false;
+            GetComponent<Rigidbody2D>().bodyType=RigidbodyType2D.Static;
+            Instantiate(kill_effect,transform.position,Quaternion.identity);
+            alive=false;
+            yield return new WaitForSeconds(2f);
+            if (life > 1)
+            {
+                float z = PlayerPrefs.GetFloat("PlayerPosZ");
+                float x = PlayerPrefs.GetFloat("PlayerPosX");
+                float y = PlayerPrefs.GetFloat("PlayerPosY");
+                life--;
+                life_text.text = "x" + life.ToString();
+                transform.localPosition = new Vector3(x, y, z);
+                health = 100;
+                alive=true;
+                GetComponent<SpriteRenderer>().enabled=true;
+                GetComponent<BoxCollider2D>().enabled=true;
+                GetComponent<CapsuleCollider2D>().enabled=true;
+                GetComponent<Rigidbody2D>().bodyType=RigidbodyType2D.Dynamic;
+                godMode = true;
+                for(int i = 0; i < 10; i++)
+                {
+                    yield return new WaitForSeconds(1);
+                    spriteRenderer.color = new Color(255, 255, 255, 100);
+                }
+                spriteRenderer.color = new Color(255, 255, 255, 255);
+                godMode = false;
+            }
+            else
+            {
+                gameObject.SetActive(false);
+                gameover.gameObject.SetActive(true);
+                timer.transform.GetComponent<timetrail>().win();
+            }
         }
     }
-
     
     // Update is called once per frame
     void Update ()
@@ -219,8 +234,11 @@ public class PrototypeHeroDemo : MonoBehaviour {
     }
     public void TakeDamage(int damage)
     {
-        Instantiate(damage_effect,transform.position,Quaternion.identity);
-        health -= damage;
+        if (!godMode)
+        {
+            Instantiate(damage_effect,transform.position,Quaternion.identity);
+            health -= damage;
+        }
     }
     /*void OnTriggerEnter2D(Collider2D other)
     {
