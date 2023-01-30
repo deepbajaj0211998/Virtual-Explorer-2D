@@ -9,7 +9,8 @@ public class SpikesActivation : MonoBehaviour
     public float spikesMovementUp;
     public float spikesPositionDown;
     private bool isSpikeUp;
-    public PrototypeHeroDemo prototypeHero;
+    //public PrototypeHeroDemo prototypeHero;
+    public PlayerController2D player;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,7 +36,7 @@ public class SpikesActivation : MonoBehaviour
         if (!isSpikeUp)
         {
             spikes.transform.localPosition = new Vector3(0, spikesMovementUp, 0);
-            prototypeHero.kill();
+            player.kill();
         }
         else
         {

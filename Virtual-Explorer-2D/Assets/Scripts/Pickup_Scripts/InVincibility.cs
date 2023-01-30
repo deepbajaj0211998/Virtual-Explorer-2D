@@ -5,7 +5,8 @@ using UnityEngine;
 public class InVincibility : MonoBehaviour
 {
 
-    public PrototypeHeroDemo prototypeHero;
+    //public PrototypeHeroDemo prototypeHero;
+    public PlayerController2D player;
     BoxCollider2D boxCollider2d;
     SpriteRenderer spriteRenderer;
     public float invincibiltyTime;
@@ -31,9 +32,9 @@ public class InVincibility : MonoBehaviour
 
     IEnumerator Invinsible()
     {
-        prototypeHero.godMode = true;
+        player.godMode = true;
         yield return new WaitForSeconds(invincibiltyTime);
-        prototypeHero.godMode = false;
+        player.godMode = false;
         Destroy(gameObject);
     }
 }

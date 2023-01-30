@@ -83,7 +83,8 @@ public class AI : MonoBehaviour
                 {
                     GetComponent<Animator>().SetTrigger("attack");
                     //other.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
-                    other.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
+                    //other.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
+                    other.gameObject.GetComponent<PlayerController2D>().TakeDamage(damage);
                     timeLastAttack = Time.time;
                     
                 }
