@@ -26,7 +26,8 @@ public class enemy3 : MonoBehaviour
                 animator.SetBool("IsAttack", true);
                 GetComponent<Animator>().SetTrigger("attack");
                 //other.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
-                collision.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
+                //collision.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
+                collision.gameObject.GetComponent<PlayerController2D>().TakeDamage(damage);
                 timeLastAttack = Time.time;
 
             }
