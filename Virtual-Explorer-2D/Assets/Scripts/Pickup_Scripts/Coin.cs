@@ -6,6 +6,7 @@ public class Coin : MonoBehaviour
 {
     //Keep track of total picked coins (Since the value is static, it can be accessed at "SC_2DCoin.totalCoins" from any script)
     public int totalCoins = 0;
+    public GameObject CoinBurstPrefab;
 
     void Awake()
     {
@@ -24,6 +25,10 @@ public class Coin : MonoBehaviour
             totalCoins++;
             //Test: Print total number of coins
             Debug.Log("You currently have " + totalCoins + " Coins.");
+            if (CoinBurstPrefab != null)
+            {
+                Instantiate(CoinBurstPrefab, transform.position, Quaternion.identity);
+            }
             //Destroy coin
             Destroy(gameObject);
             getCoins = PlayerPrefs.GetInt("NumberOfCoins");

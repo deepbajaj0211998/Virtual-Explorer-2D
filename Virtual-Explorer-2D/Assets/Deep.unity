@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalCoins: 0
+  CoinBurstPrefab: {fileID: 5747079516622850107, guid: c6814dbaf412d2b4d8f4cac1a55c867b, type: 3}
 --- !u!1 &29653468
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalCoins: 0
+  CoinBurstPrefab: {fileID: 5747079516622850107, guid: c6814dbaf412d2b4d8f4cac1a55c867b, type: 3}
 --- !u!1 &46005616
 GameObject:
   m_ObjectHideFlags: 0
@@ -37457,6 +37459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalCoins: 0
+  CoinBurstPrefab: {fileID: 5747079516622850107, guid: c6814dbaf412d2b4d8f4cac1a55c867b, type: 3}
 --- !u!1 &427064825
 GameObject:
   m_ObjectHideFlags: 0
@@ -37582,6 +37585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalCoins: 0
+  CoinBurstPrefab: {fileID: 5747079516622850107, guid: c6814dbaf412d2b4d8f4cac1a55c867b, type: 3}
 --- !u!1 &438599830
 GameObject:
   m_ObjectHideFlags: 0
@@ -128784,6 +128788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalCoins: 0
+  CoinBurstPrefab: {fileID: 5747079516622850107, guid: c6814dbaf412d2b4d8f4cac1a55c867b, type: 3}
 --- !u!1 &1581152941
 GameObject:
   m_ObjectHideFlags: 0
@@ -132235,6 +132240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalCoins: 0
+  CoinBurstPrefab: {fileID: 5747079516622850107, guid: c6814dbaf412d2b4d8f4cac1a55c867b, type: 3}
 --- !u!1 &1980922090
 GameObject:
   m_ObjectHideFlags: 0
@@ -133557,8 +133563,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94d29f8ea88b4cd4c8b7c8f02ff92fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 580496437}
+  prototypeHero: {fileID: 0}
   invincibiltyTime: 10
+  slider: {fileID: 0}
 --- !u!61 &2052962115
 BoxCollider2D:
   m_ObjectHideFlags: 0
