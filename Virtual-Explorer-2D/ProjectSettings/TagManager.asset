@@ -10,7 +10,6 @@ TagManager:
   - WinCanvas
   - SaveData_CheckPoint
   - kill
-  - Ground
   layers:
   - Default
   - TransparentFX
@@ -19,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - enemy
+  - 
   - 
   - 
   - 

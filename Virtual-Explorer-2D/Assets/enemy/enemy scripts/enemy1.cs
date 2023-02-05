@@ -52,19 +52,17 @@ public class enemy1 : MonoBehaviour
             {
 
                 if (hitright.transform.tag!="Player")
+                if(movingRight==true)
                 {
-                    if(movingRight==true)
-                    {
-                        transform.eulerAngles=new Vector3(0,180,0);
-                        patrolSpeed=-patrolSpeed;
-                        movingRight = false;
-                    }
-                    else
-                    {
-                        transform.eulerAngles=new Vector3(0,0,0);
-                        patrolSpeed=-patrolSpeed;
-                        movingRight = true;
-                    }
+                    transform.eulerAngles=new Vector3(0,180,0);
+                    patrolSpeed=-patrolSpeed;
+                    movingRight = false;
+                }
+                else
+                {
+                    transform.eulerAngles=new Vector3(0,0,0);
+                    patrolSpeed=-patrolSpeed;
+                    movingRight = true;
                 }
             }
             
@@ -80,8 +78,8 @@ public class enemy1 : MonoBehaviour
                 if (Time.time > timeLastAttack + timeBetweenAttacks)
                 {
                     GetComponent<Animator>().SetTrigger("attack");
-                    other.gameObject.GetComponent<advance_character_controller>().TakeDamage(damage);
-                    //other.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
+                    //other.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+                    other.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
                     timeLastAttack = Time.time;
                     
                 }
