@@ -19,7 +19,7 @@ public class BouncyPlatform : MonoBehaviour
     {
         if (collision.CompareTag("BouncyPlatform"))
         {
-            rigidbody2D.velocity = new Vector3(rigidbody2D.velocity.x, Random.Range(minimumJumpForces, maximumJumpForces));
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, Random.Range(minimumJumpForces, maximumJumpForces));
         }
     }
 
