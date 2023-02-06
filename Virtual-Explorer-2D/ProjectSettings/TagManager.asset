@@ -10,6 +10,7 @@ TagManager:
   - WinCanvas
   - SaveData_CheckPoint
   - kill
+  - BouncyPlatform
   layers:
   - Default
   - TransparentFX
