@@ -11,6 +11,7 @@ TagManager:
   - SaveData_CheckPoint
   - kill
   - BouncyPlatform
+  - SliperyPlatform
   layers:
   - Default
   - TransparentFX
