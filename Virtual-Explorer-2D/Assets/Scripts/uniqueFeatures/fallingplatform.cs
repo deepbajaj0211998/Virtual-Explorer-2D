@@ -27,6 +27,10 @@ public class fallingplatform : MonoBehaviour
             StartCoroutine(wait());
         }
     }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        time=0f;
+    }
     IEnumerator wait()
     {
         GetComponent<CapsuleCollider2D>().enabled=true;

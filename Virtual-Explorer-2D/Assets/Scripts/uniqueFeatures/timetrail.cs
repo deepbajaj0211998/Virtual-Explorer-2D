@@ -37,7 +37,7 @@ public class timetrail : MonoBehaviour
             if(timeleft<2)
             {
                 gameover=true;
-                StartCoroutine(player.transform.GetComponent<PrototypeHeroDemo>().kill());
+                StartCoroutine(player.transform.GetComponent<advance_character_controller>().kill());
             }
         }
     }
