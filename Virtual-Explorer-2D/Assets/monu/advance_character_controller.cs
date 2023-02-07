@@ -37,6 +37,9 @@ public class advance_character_controller : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetFloat("PlayerPosX", transform.position.x);
+		PlayerPrefs.SetFloat("PlayerPosY", transform.position.y);
+		PlayerPrefs.SetFloat("PlayerPosZ", transform.position.z);
         animator = GetComponent<Animator>();
         rigidBody = GetComponent<Rigidbody2D>();
         pos=transform.position;
@@ -49,6 +52,7 @@ public class advance_character_controller : MonoBehaviour
             GetComponent<SpriteRenderer>().enabled=false;
             GetComponent<BoxCollider2D>().enabled=false;
             GetComponent<CircleCollider2D>().enabled=false;
+            GetComponent<CapsuleCollider2D>().enabled=false;
             GetComponent<Rigidbody2D>().bodyType=RigidbodyType2D.Static;
             Instantiate(kill_effect,transform.position,Quaternion.identity);
             alive=false;
@@ -66,6 +70,7 @@ public class advance_character_controller : MonoBehaviour
                 GetComponent<SpriteRenderer>().enabled=true;
                 GetComponent<BoxCollider2D>().enabled=true;
                 GetComponent<CircleCollider2D>().enabled=true;
+                GetComponent<CapsuleCollider2D>().enabled=true;
                 GetComponent<Rigidbody2D>().bodyType=RigidbodyType2D.Dynamic;
                 godMode = true;
                 for(int i = 0; i < 10; i++)
