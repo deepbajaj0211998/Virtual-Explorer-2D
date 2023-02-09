@@ -12,6 +12,9 @@ TagManager:
   - kill
   - BouncyPlatform
   - SliperyPlatform
+  - Ground
+  - SlipLeftToRight
+  - SlipRightToLeft
   layers:
   - Default
   - TransparentFX
