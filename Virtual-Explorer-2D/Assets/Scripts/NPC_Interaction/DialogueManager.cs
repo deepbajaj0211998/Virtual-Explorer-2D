@@ -9,8 +9,8 @@ public class DialogueManager : MonoBehaviour
 
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
-    Queue<string> sentences;
-    public Animator animator;
+    public Queue<string> sentences;
+    public Animator animator; 
 
     // Start is called before the first frame update
     void Start()
