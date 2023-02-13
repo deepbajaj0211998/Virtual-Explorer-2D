@@ -12,6 +12,7 @@ public class DialogueTrigger : MonoBehaviour
 
 	private Transform playerTransform; // The player's transform
 	private bool isTriggered = false; // Whether the trigger has been activated
+	public bool isCollected = false;
 	private Animator animator; // The NPC's animator component
 	bool isActive = false;
 
@@ -37,11 +38,8 @@ public class DialogueTrigger : MonoBehaviour
 			// If the distance is less than 1, the NPC has reached the player
 			if (distanceToPlayer < 1)
 			{
-				
 				speed = 0f;
 				animator.SetBool("IsWalking", false);
-				if(isActive && manager.sentences.Count == 0)
-					NPC();
 			}
 			else
 			{
@@ -59,7 +57,7 @@ public class DialogueTrigger : MonoBehaviour
 		}
 	}
 
-	public void NPC()
+	/*public void NPC()
 	{
 		StartCoroutine("WaitForSecond");
 	}
@@ -67,15 +65,15 @@ public class DialogueTrigger : MonoBehaviour
 	IEnumerator WaitForSecond()
 	{
 		Debug.Log("WaitForSeconds");
-		yield return new WaitForSeconds(10f);
+		yield return new WaitForSeconds(3f);
 		gameObject.SetActive(false);
-	}
+	}*/
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 	    if (collision.CompareTag("Player"))
 	    {
-			FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+			FindObjectOfType<DialogueManager>().StartDialogue(dialogue);	
 			isActive = true;
 		}
 	}
