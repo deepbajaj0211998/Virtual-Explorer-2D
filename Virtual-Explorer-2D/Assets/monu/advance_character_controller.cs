@@ -25,6 +25,7 @@ public class advance_character_controller : MonoBehaviour
     public GameObject damage_effect;
 
     public bool godMode = false;
+    public bool isCollected = false;
 
     private SpriteRenderer spriteRenderer;
 
@@ -155,4 +156,14 @@ public class advance_character_controller : MonoBehaviour
             health -= damage;
         }
     }
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if(collision.gameObject.tag == "Key")
+		{
+            Destroy(collision.gameObject);
+            isCollected = true;
+        }
+	}
+
 }
