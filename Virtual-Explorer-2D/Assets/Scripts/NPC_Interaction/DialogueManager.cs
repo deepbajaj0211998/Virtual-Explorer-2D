@@ -10,7 +10,9 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public Queue<string> sentences;
-    public Animator animator; 
+    public Animator animator;
+    public GameObject npc;
+    public GameObject itemPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +60,11 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
 	{
         animator.SetBool("IsOpen", false);
+        npc.gameObject.SetActive(false);
+		if (!npc.activeInHierarchy)
+		{
+            GameObject item = Instantiate(itemPrefab, itemPrefab.transform.position, Quaternion.identity);
+        }
     }
 
 }
