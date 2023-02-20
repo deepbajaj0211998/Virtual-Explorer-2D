@@ -12,6 +12,8 @@ public class advance_character_controller : MonoBehaviour
     public float gravityScale = 9.8f;
     public float groundCheckRadius = 0.2f;
     public float health = 100f;
+    public GameObject img;
+    public int img_dragged=0;
     public bool alive=true;
     private int life=3;
     public Image health_image;

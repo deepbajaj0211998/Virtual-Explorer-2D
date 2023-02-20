@@ -10,6 +10,10 @@ TagManager:
   - WinCanvas
   - SaveData_CheckPoint
   - kill
+  - Ground
+  - img
+  - slot
+  - Img
   layers:
   - Default
   - TransparentFX
