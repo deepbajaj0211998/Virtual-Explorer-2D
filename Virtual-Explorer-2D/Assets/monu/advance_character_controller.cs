@@ -14,6 +14,8 @@ public class advance_character_controller : MonoBehaviour
     public float health = 100f;
     public bool alive=true;
     private int life=3;
+    public int img_dragged=0;
+    public GameObject img;
     public Image health_image;
     [SerializeField] TextMeshProUGUI life_text;
     [SerializeField] GameObject timer;
