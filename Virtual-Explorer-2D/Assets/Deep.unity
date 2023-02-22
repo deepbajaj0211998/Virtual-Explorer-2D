@@ -38781,7 +38781,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.0100007, y: 0.7068878, z: -10}
+  m_LocalPosition: {x: -45.31, y: 0.7068878, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -65627,8 +65627,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: 0
-  player: {fileID: 580496433}
-  enemySpeed: 5
+  enemySpeed: 3
+  enemyHealth: 100
+  damege: 10
 --- !u!50 &1161769008
 Rigidbody2D:
   serializedVersion: 4
@@ -65641,7 +65642,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -65660,10 +65661,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.24881172, y: 0.9059438}
+  m_Offset: {x: -0.0757041, y: 0.9059438}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -65674,7 +65675,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1915321, y: 1.9883024}
+  m_Size: {x: 0.8453169, y: 1.9883024}
   m_EdgeRadius: 0
 --- !u!70 &1161769010
 CapsuleCollider2D:
@@ -65686,14 +65687,30 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.89908063}
-  m_Size: {x: 0.5, y: 1.8098586}
+  m_Offset: {x: -0.104980946, y: 0.89908063}
+  m_Size: {x: 1.6071787, y: 1.8098586}
   m_Direction: 0
 --- !u!58 &1161769011
 CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161769004}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.96862125, y: 0.5730381}
+  serializedVersion: 2
+  m_Radius: 6.3180647
+--- !u!68 &1161769014
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -65705,9 +65722,17 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.96862125, y: 0.5730381}
-  serializedVersion: 2
-  m_Radius: 6.3180647
+  m_Offset: {x: -8.01, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.19462013, y: -1.5503943}
+  - {x: -0.17112923, y: -1.2450135}
+  - {x: -0.17112732, y: 3.218243}
+  - {x: -0.08727074, y: -1.291995}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1180918201
 GameObject:
   m_ObjectHideFlags: 0
@@ -131734,7 +131759,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818917569}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.0100007, y: 0.7068878, z: -10}
+  m_LocalPosition: {x: -45.31, y: 0.7068878, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -135392,10 +135417,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6997491117926425464, guid: 81358268dd4951348ab5f94c0db6d1a6, type: 3}
+      propertyPath: m_Mass
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6997491117926425465, guid: 81358268dd4951348ab5f94c0db6d1a6, type: 3}
       propertyPath: timer
       value: 
       objectReference: {fileID: 450128193}
+    - target: {fileID: 6997491117926425465, guid: 81358268dd4951348ab5f94c0db6d1a6, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6997491117926425465, guid: 81358268dd4951348ab5f94c0db6d1a6, type: 3}
       propertyPath: godMode
       value: 1
@@ -135422,7 +135455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6997491117926425469, guid: 81358268dd4951348ab5f94c0db6d1a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.01
+      value: -45.31
       objectReference: {fileID: 0}
     - target: {fileID: 6997491117926425469, guid: 81358268dd4951348ab5f94c0db6d1a6, type: 3}
       propertyPath: m_LocalPosition.y

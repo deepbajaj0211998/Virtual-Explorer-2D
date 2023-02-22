@@ -12,6 +12,7 @@ public class SwordEnemy : MonoBehaviour
     public float enemyHealth;
     private float playerHealth;
     public float damege;
+    private bool canTakeDamage = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,12 @@ public class SwordEnemy : MonoBehaviour
     {
         if (trigger)
         {
+            animator.SetBool("Walk", true);
             rb2D.velocity = new Vector2(-enemySpeed, rb2D.velocity.y);
+        }
+        else
+        {
+            animator.SetBool("Walk", false);
         }
 
         if(enemyHealth <= 0)
@@ -37,40 +43,49 @@ public class SwordEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if(collision is CircleCollider2D)
-        //{
-            if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
+        {
+            if (collision is EdgeCollider2D)
             {
                 trigger = true;
-                animator.SetBool("Walk", true);
+                
                 playerHealth = collision.GetComponent<PlayerController2D>().health;
             }
-        //}
-        if (collision is BoxCollider2D)
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
         {
-            if (collision.CompareTag("Player"))
+            if (collision is CapsuleCollider2D)
             {
                 trigger = false;
                 animator.SetBool("Attack", true);
+                canTakeDamage = true;
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision is BoxCollider2D)
+        if (collision is CapsuleCollider2D)
         {
             if (collision.CompareTag("Player"))
             {
                 trigger = true;
                 animator.SetBool("Attack", false);
+                canTakeDamage = false;
             }
         }
     }
 
     public void Attack()
     {
-        playerHealth -= damege;
+        if (canTakeDamage)
+        {
+            playerHealth -= damege;
+        }
     }
 
 }

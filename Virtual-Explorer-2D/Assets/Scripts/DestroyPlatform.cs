@@ -35,6 +35,14 @@ public class DestroyPlatform : MonoBehaviour
             rigidbody2D[i].gravityScale = 1;
             yield return new WaitForSeconds(timeForFalling);
         }
+
+        yield return new WaitForSeconds(4f);
+
+        for (int i = 0; i < rigidbody2D.Length; i++)
+        {
+            Destroy(rigidbody2D[i].gameObject);
+            yield return new WaitForSeconds(timeForFalling);
+        }
     }
 
 }
