@@ -10,9 +10,9 @@ public class SwordEnemy : MonoBehaviour
     public float enemySpeed;
     private Animator animator;
     public float enemyHealth;
-    private float playerHealth;
     public float damege;
     private bool canTakeDamage = false;
+    public PlayerController2D playerController2d;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +34,7 @@ public class SwordEnemy : MonoBehaviour
             animator.SetBool("Walk", false);
         }
 
-        if(enemyHealth <= 0)
+        if (enemyHealth <= 0)
         {
             animator.SetTrigger("Die");
             Destroy(gameObject, 3f);
@@ -48,8 +48,6 @@ public class SwordEnemy : MonoBehaviour
             if (collision is EdgeCollider2D)
             {
                 trigger = true;
-                
-                playerHealth = collision.GetComponent<PlayerController2D>().health;
             }
         }
     }
@@ -84,7 +82,7 @@ public class SwordEnemy : MonoBehaviour
     {
         if (canTakeDamage)
         {
-            playerHealth -= damege;
+            playerController2d.health -= damege;
         }
     }
 
