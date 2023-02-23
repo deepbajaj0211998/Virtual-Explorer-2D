@@ -6,7 +6,7 @@ using TMPro;
 
 public class advance_character_controller : MonoBehaviour
 {
-    Animator animator;
+    public Animator animator;
     public float speed = 10f;
     public float jumpForce = 10f;
     public float gravityScale = 9.8f;

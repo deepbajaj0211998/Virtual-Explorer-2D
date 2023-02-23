@@ -15,6 +15,7 @@ public class DialogueTrigger : MonoBehaviour
 	public bool isCollected = false;
 	private Animator animator; // The NPC's animator component
 	bool isActive = false;
+	public GameObject player; 
 
 	private void Start()
 	{
@@ -27,6 +28,8 @@ public class DialogueTrigger : MonoBehaviour
 		if (!isTriggered && Vector2.Distance(playerTransform.position, triggerPosition.position) < 0.5f)
 		{
 			isTriggered = true;
+			
+			player.GetComponent<advance_character_controller>().enabled = false;
 		}
 
 		// If the trigger has been activated

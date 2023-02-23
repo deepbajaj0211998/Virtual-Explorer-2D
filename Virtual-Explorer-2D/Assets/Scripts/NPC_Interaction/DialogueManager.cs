@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
     public GameObject npc;
     public GameObject itemPrefab;
+    public advance_character_controller controller; 
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +64,7 @@ public class DialogueManager : MonoBehaviour
         npc.gameObject.SetActive(false);
 		if (!npc.activeInHierarchy)
 		{
+            
             GameObject item = Instantiate(itemPrefab, itemPrefab.transform.position, Quaternion.identity);
         }
     }

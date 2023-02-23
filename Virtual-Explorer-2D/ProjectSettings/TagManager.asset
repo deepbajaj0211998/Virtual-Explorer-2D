@@ -16,7 +16,8 @@ TagManager:
   - SlipLeftToRight
   - SlipRightToLeft
   - FxTemporaire
-  - Key
+  - WrongKey
+  - RightKey
   layers:
   - Default
   - TransparentFX
