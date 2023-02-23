@@ -65630,6 +65630,7 @@ MonoBehaviour:
   enemySpeed: 3
   enemyHealth: 100
   damege: 10
+  playerController2d: {fileID: 580496437}
 --- !u!50 &1161769008
 Rigidbody2D:
   serializedVersion: 4
