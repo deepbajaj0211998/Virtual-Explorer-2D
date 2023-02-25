@@ -193,6 +193,8 @@ MonoBehaviour:
   groundCheckRadius: 0.2
   health: 100
   alive: 1
+  img_dragged: 0
+  img: {fileID: 0}
   health_image: {fileID: 0}
   life_text: {fileID: 0}
   timer: {fileID: 0}
@@ -202,6 +204,7 @@ MonoBehaviour:
   kill_effect: {fileID: 6339914803746857600, guid: 9dbef2aced792b24d9a7d47cb0f4c52d, type: 3}
   damage_effect: {fileID: 7326792513202242936, guid: 6f80da89b508e1b4bb1003b12ff030a5, type: 3}
   godMode: 0
+  isCollected: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
