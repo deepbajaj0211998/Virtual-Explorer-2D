@@ -167,5 +167,24 @@ public class advance_character_controller : MonoBehaviour
             isCollected = true;
         }
 	}
+    void AE_runStop()
+    {
+    }
 
+    void AE_footstep()
+    {
+    }
+
+    void AE_Jump()
+    {
+        // Spawn Dust
+        
+    }
+
+    void AE_Landing()
+    {
+       
+        // Spawn Dust
+        
+    }
 }

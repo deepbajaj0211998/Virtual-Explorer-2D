@@ -21,7 +21,7 @@ public class enemy1 : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
     }
-    IEnumerator wait()
+    public IEnumerator wait()
     {
         yield return new WaitForSeconds(.5f);
         Instantiate(kill_effect,transform.position,Quaternion.identity);
