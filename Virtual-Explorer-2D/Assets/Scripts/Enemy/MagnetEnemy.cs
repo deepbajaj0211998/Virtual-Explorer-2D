@@ -9,6 +9,7 @@ public class MagnetEnemy : MonoBehaviour
     public GameObject enemy;
     float timeStamp;
     private bool mangnet = false;
+    public string enemyName;
 
     private void Start()
     {
@@ -19,8 +20,8 @@ public class MagnetEnemy : MonoBehaviour
     {
         if (mangnet)
         {
-            Vector2 enem = - (transform.position - enemy.transform.position).normalized;
-            rb2d.velocity = new Vector2(enem.x, enem.y) * 10f * (Time.time / timeStamp);
+            Vector2 enem = -(transform.position - enemy.transform.position).normalized;
+            rb2d.velocity = new Vector2(enem.x, enem.y) * 5f * (Time.time / timeStamp);
         }
     }
 
@@ -28,17 +29,28 @@ public class MagnetEnemy : MonoBehaviour
     {
         if (collision.CompareTag("Magnet"))
         {
+            //Debug.Log("test");
+            //enemy.GetComponent<PlayerController2D>().enabled = false;
             mangnet = true;
             timeStamp = Time.time;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Magnet"))
-        {
-            mangnet = false;
-        }
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if(collision.gameObject.name == enemyName)
+    //    {
+    //        enemy.GetComponent<PlayerController2D>().enabled = true;
+    //        mangnet = false;
+    //    }
+    //}
+
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Magnet"))
+    //    {
+    //        mangnet = false;
+    //    }
+    //}
 
 }
