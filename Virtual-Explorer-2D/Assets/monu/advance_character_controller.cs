@@ -161,10 +161,12 @@ public class advance_character_controller : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(collision.gameObject.tag == "Key")
+		if(collision.gameObject.tag == "RightKey")
 		{
             Destroy(collision.gameObject);
             isCollected = true;
+            if (collision.gameObject.activeInHierarchy)
+                collision.gameObject.SetActive(false);
         }
 	}
     void AE_runStop()

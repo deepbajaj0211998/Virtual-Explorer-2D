@@ -28,7 +28,8 @@ public class DialogueTrigger : MonoBehaviour
 		if (!isTriggered && Vector2.Distance(playerTransform.position, triggerPosition.position) < 0.5f)
 		{
 			isTriggered = true;
-			
+			player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+			player.GetComponent<Animator>().SetInteger("AnimState", 0);
 			player.GetComponent<advance_character_controller>().enabled = false;
 		}
 

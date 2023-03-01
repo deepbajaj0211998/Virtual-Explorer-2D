@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
     public GameObject npc;
     public GameObject itemPrefab;
-    public advance_character_controller controller; 
+    public GameObject player; 
 
     // Start is called before the first frame update
     void Start()
@@ -62,10 +62,12 @@ public class DialogueManager : MonoBehaviour
 	{
         animator.SetBool("IsOpen", false);
         npc.gameObject.SetActive(false);
+        
 		if (!npc.activeInHierarchy)
 		{
-            
-            GameObject item = Instantiate(itemPrefab, itemPrefab.transform.position, Quaternion.identity);
+            player.GetComponent<advance_character_controller>().enabled = true;
+            player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            itemPrefab.SetActive(true);
         }
     }
 
