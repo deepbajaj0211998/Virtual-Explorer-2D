@@ -34,10 +34,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _edgethikness: 80.8
-    - _lazeredgesmothness: 25
-    - _lazerscale: -5.4
+    - _edgethikness: 0.73
+    - _lazeredgesmothness: 6.71
+    - _lazerscale: 3.24
     m_Colors:
-    - _Color: {r: 1, g: 0, b: 0, a: 1}
-    - _lazerspeed: {r: -0.2, g: 0, b: 0, a: 0}
+    - _Color: {r: 0, g: 0.023376465, b: 1, a: 1}
+    - _lazerspeed: {r: -9.42, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

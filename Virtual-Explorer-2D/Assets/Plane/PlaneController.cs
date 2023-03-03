@@ -48,7 +48,18 @@ public class PlaneController : MonoBehaviour
         {
             laserBeam.SetActive(true);
             laserBeam.GetComponent<LineRenderer>().SetPosition(0,(Vector2)gunPoint.position);
-            laserBeam.GetComponent<LineRenderer>().SetPosition(1,(Vector2)gunPoint.position+ new Vector2(30f,0f));
+            Camera mainCamera = Camera.main;
+            // Get the mouse position in screen coordinates
+            Vector3 mousePositionScreen = Input.mousePosition;
+
+            // Set the distance from the camera to the game world plane
+            float distanceToPlane = 10.0f;
+
+            // Convert the mouse position to a point on the game world plane
+            Vector3 mousePositionWorld = mainCamera.ScreenToWorldPoint(new Vector3(mousePositionScreen.x, mousePositionScreen.y, distanceToPlane));
+
+            // laserBeam.GetComponent<LineRenderer>().SetPosition(1,(Vector2)gunPoint.position+ new Vector2(30f,0f));
+            laserBeam.GetComponent<LineRenderer>().SetPosition(1,(Vector2)mousePositionWorld);
         }
 
         // Shoot bullets when the right mouse button is pressed

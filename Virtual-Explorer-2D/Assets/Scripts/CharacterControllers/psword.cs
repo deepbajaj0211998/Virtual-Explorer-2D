@@ -5,9 +5,10 @@ using UnityEngine;
 public class psword : MonoBehaviour
 {
     public Transform attackPoint;
+    bool fir=false;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-    public int swordDamage = 10;
+    public int swordDamage = 100;
     public float swordCooldown = 1.0f;
     public GameObject swordPrefab;
     public float swordOffset = 1.0f;
@@ -20,24 +21,49 @@ public class psword : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        sword = Instantiate(swordPrefab, transform.position, Quaternion.identity);
-        sword.transform.parent = transform;
-        sword.transform.localPosition = new Vector3(swordOffset, 0, 0);
+        sword=swordPrefab;
     }
 
     private void Update()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0;
-        sword.transform.right = mousePos - transform.position;
-
-        if (Input.GetMouseButtonDown(0) && canAttack)
+        // mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // mousePos.z = 0;
+        // sword.transform.right = mousePos - transform.position;
+        if(GetComponent<SpriteRenderer>().flipX==false && fir==true)
         {
-            animator.SetTrigger("Attack");
             Attack();
-            canAttack = false;
-            Invoke("ResetAttack", swordCooldown);
+            sword.GetComponent<LineRenderer>().SetPosition(0,(Vector2)attackPoint.position);
+            sword.GetComponent<LineRenderer>().SetPosition(1,(Vector2)attackPoint.position + new Vector2(4f,0f));
         }
+        else if(fir==true)
+        {
+            Attack();
+            sword.GetComponent<LineRenderer>().SetPosition(0,new Vector2(attackPoint.position.x-1,attackPoint.position.y));
+            sword.GetComponent<LineRenderer>().SetPosition(1,new Vector2(attackPoint.position.x-5,attackPoint.position.y));
+        }
+
+        // if (Input.GetMouseButtonDown(0) && canAttack)
+        // {
+        //     //animator.SetTrigger("Attack");
+        //     Attack();
+        //     canAttack = false;
+        //     Invoke("ResetAttack", swordCooldown);
+        // }
+        if (Input.GetButtonDown("Fire1"))
+        {
+            fir=true;
+        }
+
+        if (Input.GetButtonUp("Fire1"))
+        {
+            sword.SetActive(false);
+            fir=false;
+        }
+        if(fir==true)
+        {
+            sword.SetActive(true);
+        }
+        
     }
 
     private void Attack()
@@ -46,7 +72,7 @@ public class psword : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            // Deal damage to enemy
+            if(enemy.CompareTag("enemy"))
             enemy.GetComponent<enemy1>().TakeDamage(swordDamage);
         }
     }
