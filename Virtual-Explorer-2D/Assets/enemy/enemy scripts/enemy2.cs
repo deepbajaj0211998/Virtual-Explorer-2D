@@ -37,7 +37,7 @@ public class enemy2 : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             // Apply damage to the player if the enemy touches the player
-            other.transform.GetComponent<PrototypeHeroDemo>().TakeDamage(100);
+            other.transform.GetComponent<advance_character_controller>().TakeDamage(100);
             Instantiate(kill_effect,transform.position,Quaternion.identity);
             Destroy(gameObject);
         }
