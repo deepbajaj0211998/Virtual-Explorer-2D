@@ -140,13 +140,13 @@ public class enemy_level_2 : MonoBehaviour
 
     private void Explode()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 5f);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 8f);
         Instantiate(kill_effect,transform.position,Quaternion.identity);
         foreach (Collider2D col in colliders)
         {
             if (col.gameObject.CompareTag("Player"))
             {
-                col.GetComponent<advance_character_controller>().TakeDamage(explosionDamage);
+                col.GetComponent<PrototypeHeroDemo>().TakeDamage(explosionDamage);
                 Vector2 knockbackDirection = (col.transform.position - transform.position).normalized;
                 col.transform.GetComponent<Rigidbody2D>().AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
             }
@@ -154,4 +154,5 @@ public class enemy_level_2 : MonoBehaviour
 
         Destroy(gameObject);
     }
+    
 }

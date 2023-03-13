@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2693941309355849696}
   - component: {fileID: 2693941309355849697}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: mainlevbuild_190
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2693941309483762383}
   - component: {fileID: 2693941309483762380}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: mainlevbuild_189 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2693941310089836062}
   - component: {fileID: 2693941310089836063}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: mainlevbuild_189
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2693941310163536708}
   - component: {fileID: 2693941310163536709}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: fallingplatform_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,9 +324,9 @@ GameObject:
   - component: {fileID: 2693941309388259968}
   - component: {fileID: 2693941309388259982}
   - component: {fileID: 2693941309388259969}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: 'falling platform_notile_prefab '
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,4 +375,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afd80fe58a4f1a143b8c68c10f48206a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totaltime: 2
+  totaltime: 1
