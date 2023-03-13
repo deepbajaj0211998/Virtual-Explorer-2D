@@ -23,7 +23,7 @@ public class enemy1 : MonoBehaviour
     }
     public IEnumerator wait()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.2f);
         Instantiate(kill_effect,transform.position,Quaternion.identity);
         Destroy(gameObject);
     }
@@ -41,7 +41,9 @@ public class enemy1 : MonoBehaviour
                 transform.GetChild(0).GetComponent<CapsuleCollider2D>().enabled=false;
 
                 is_alive=false;
+                Time.timeScale = 0;
                 StartCoroutine(wait());
+                Time.timeScale = 1;
                 int killCount = PlayerPrefs.GetInt("KillCount");
                 PlayerPrefs.SetInt("KillCount", killCount + 1);
             }
@@ -93,9 +95,8 @@ public class enemy1 : MonoBehaviour
                 if (Time.time > timeLastAttack + timeBetweenAttacks)
                 {
                     GetComponent<Animator>().SetTrigger("attack");
-                    //other.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
-                    // other.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
-                    other.gameObject.GetComponent<advance_character_controller>().TakeDamage(damage);
+                  
+                    other.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
                     timeLastAttack = Time.time;
                     
                 }

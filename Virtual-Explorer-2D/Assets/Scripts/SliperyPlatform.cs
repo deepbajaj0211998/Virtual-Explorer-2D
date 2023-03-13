@@ -7,6 +7,7 @@ public class SliperyPlatform : MonoBehaviour
     Rigidbody2D rigidbody2D;
     public float slipForces;
     bool isSlipry = false;
+    float playerInput;
 
     [Range(-1,1)]
     public float slipDirection;
@@ -17,16 +18,22 @@ public class SliperyPlatform : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        playerInput = Input.GetAxis("Horizontal");
+        slipDirection = playerInput;
+    }
+
     private void FixedUpdate()
     {
         if (isSlipry)
         {
             rigidbody2D.velocity = new Vector2(slipDirection * slipForces, rigidbody2D.velocity.y);
         }
-        else
+       /* else
         {
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, rigidbody2D.velocity.y);
-        }
+        }*/
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -37,17 +44,7 @@ public class SliperyPlatform : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("SlipLeftToRight"))
-        {
-            slipDirection = 1;
-        }
-        if (collision.CompareTag("SlipRightToLeft"))
-        {
-            slipDirection = -1;
-        }
-    }
+   
 
     private void OnTriggerExit2D(Collider2D collision)
     {

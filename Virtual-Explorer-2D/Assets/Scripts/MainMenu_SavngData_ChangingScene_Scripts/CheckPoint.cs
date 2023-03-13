@@ -7,11 +7,11 @@ public class CheckPoint : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.CompareTag("Player"))
+		if (collision.CompareTag("CheckPoint"))
 		{
-			PlayerPrefs.SetFloat("PlayerPosX", transform.position.x);
-			PlayerPrefs.SetFloat("PlayerPosY", transform.position.y);
-			PlayerPrefs.SetFloat("PlayerPosZ", transform.position.z);
+			PlayerPrefs.SetFloat("PlayerPosX", collision.transform.position.x);
+			PlayerPrefs.SetFloat("PlayerPosY", collision.transform.position.y);
+			PlayerPrefs.SetFloat("PlayerPosZ", collision.transform.position.z);
 		}
 	}
 
