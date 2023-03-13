@@ -19,16 +19,24 @@ public class LaserBeamController : MonoBehaviour
 
     void Update()
     {
+        Camera mainCamera = Camera.main;
+            // Get the mouse position in screen coordinates
+            Vector3 mousePositionScreen = Input.mousePosition;
+
+            // Set the distance from the camera to the game world plane
+            float distanceToPlane = 10.0f;
+
+            // Convert the mouse position to a point on the game world plane
+            Vector3 mousePositionWorld = mainCamera.ScreenToWorldPoint(new Vector3(mousePositionScreen.x, mousePositionScreen.y, distanceToPlane));
 
         // Update the length of the laser beam based on the distance to the nearest object in its path
-        RaycastHit2D hit = Physics2D.Raycast(gunPoint.transform.position, transform.right);
+        RaycastHit2D hit = Physics2D.Raycast(gunPoint.transform.position,(mousePositionWorld-gunPoint.transform.position).normalized);
         if (hit.collider != null)
         {
             //lineRenderer.SetPosition(1, new Vector3(hit.distance, 0, 0));
             // If the laser beam collides with an enemy, deal damage to the enemy
             if (hit.collider.CompareTag("enemy"))
             {
-                Debug.Log("monu");
                 enemy1 enemy = hit.collider.GetComponent<enemy1>();
                 enemy.TakeDamage(damage);
             }
