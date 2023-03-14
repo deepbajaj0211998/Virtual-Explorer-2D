@@ -5,16 +5,16 @@ using UnityEngine;
 public class FireBall : MonoBehaviour
 {
 
-    float moveSpeed = 7f;
+    float moveSpeed = 3f;
     Rigidbody2D rb;
-    advance_character_controller target;
+    PrototypeHeroDemo target;
     Vector2 moveDirection;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        target = GameObject.FindObjectOfType<advance_character_controller>();
+        target = GameObject.FindObjectOfType<PrototypeHeroDemo>();
         moveDirection = (target.transform.position - transform.position).normalized * moveSpeed;
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
         Destroy(gameObject, 3f);

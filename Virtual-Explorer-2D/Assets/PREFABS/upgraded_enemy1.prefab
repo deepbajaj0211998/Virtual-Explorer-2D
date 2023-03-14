@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5860672945347551395}
   - component: {fileID: 5961069543012794908}
   - component: {fileID: 8325661112632183710}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: kill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,9 +46,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.018384933, y: -0.4683652}
-  m_Size: {x: 1.1807365, y: 2.957284}
-  m_Direction: 0
+  m_Offset: {x: 0.0013026688, y: 0.6590339}
+  m_Size: {x: 1.4715202, y: 0.29240316}
+  m_Direction: 1
 --- !u!114 &8325661112632183710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3409312381205179485}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: groundcheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 5536939218477194868}
   - component: {fileID: 5536939218477194878}
   - component: {fileID: 5536939218477194879}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: upgraded_enemy1
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 4723107735738678597, guid: f8b30c2afe165d645b54d500a9c30862, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 9.375, y: 9.375}

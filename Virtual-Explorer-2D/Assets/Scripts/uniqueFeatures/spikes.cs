@@ -10,7 +10,7 @@ public class spikes : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             // Apply damage to the player if the enemy touches the player
-            StartCoroutine(other.transform.GetComponent<advance_character_controller>().kill());
+            StartCoroutine(other.transform.GetComponent<PrototypeHeroDemo>().kill());
         }
     }
 }

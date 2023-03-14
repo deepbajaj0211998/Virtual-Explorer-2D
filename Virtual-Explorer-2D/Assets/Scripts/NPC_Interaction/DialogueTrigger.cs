@@ -15,7 +15,6 @@ public class DialogueTrigger : MonoBehaviour
 	public bool isCollected = false;
 	private Animator animator; // The NPC's animator component
 	bool isActive = false;
-	public GameObject player; 
 
 	private void Start()
 	{
@@ -28,9 +27,6 @@ public class DialogueTrigger : MonoBehaviour
 		if (!isTriggered && Vector2.Distance(playerTransform.position, triggerPosition.position) < 0.5f)
 		{
 			isTriggered = true;
-			player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-			player.GetComponent<Animator>().SetInteger("AnimState", 0);
-			player.GetComponent<advance_character_controller>().enabled = false;
 		}
 
 		// If the trigger has been activated
@@ -40,7 +36,7 @@ public class DialogueTrigger : MonoBehaviour
 			float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
 
 			// If the distance is less than 1, the NPC has reached the player
-			if (distanceToPlayer < 1)
+			if (distanceToPlayer < 1.5f)
 			{
 				speed = 0f;
 				animator.SetBool("IsWalking", false);
@@ -79,7 +75,11 @@ public class DialogueTrigger : MonoBehaviour
 	    {
 			FindObjectOfType<DialogueManager>().StartDialogue(dialogue);	
 			isActive = true;
-		}
+			//collision.GetComponent<PrototypeHeroDemo>().m_maxSpeed= 0f;
+            //collision.GetComponent<PrototypeHeroDemo>().m_jumpForce = 0f;
+        }
 	}
+
+  
 
 }

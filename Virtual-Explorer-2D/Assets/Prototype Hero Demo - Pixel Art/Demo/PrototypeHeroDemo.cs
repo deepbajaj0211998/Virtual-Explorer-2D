@@ -77,12 +77,13 @@ public class PrototypeHeroDemo : MonoBehaviour {
                 GetComponent<CapsuleCollider2D>().enabled=true;
                 GetComponent<Rigidbody2D>().bodyType=RigidbodyType2D.Dynamic;
                 godMode = true;
-                for(int i = 0; i < 10; i++)
+                /*for(int i = 0; i < 10; i++)
                 {
                     yield return new WaitForSeconds(1);
                     spriteRenderer.color = new Color(255, 255, 255, 100);
                 }
                 spriteRenderer.color = new Color(255, 255, 255, 255);
+                */
                 godMode = false;
             }
             else

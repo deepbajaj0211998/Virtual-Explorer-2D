@@ -86,6 +86,9 @@ GameObject:
   - component: {fileID: 7853426713638563735}
   - component: {fileID: 7953872935334828980}
   - component: {fileID: 8013521178382229743}
+  - component: {fileID: 1829099274}
+  - component: {fileID: 1829099255}
+  - component: {fileID: 1829099268}
   m_Layer: 0
   m_Name: PrototypeHero
   m_TagString: Player
@@ -125,6 +128,7 @@ MonoBehaviour:
   health: 100
   m_jumpForce: 7.5
   m_hideSword: 0
+  alive: 1
   m_RunStopDust: {fileID: 7310271610845027193, guid: 39afca3c109b26049a80bc07593eb271, type: 3}
   health_image: {fileID: 0}
   life_text: {fileID: 0}
@@ -132,6 +136,11 @@ MonoBehaviour:
   m_LandingDust: {fileID: 9076098953984712191, guid: 0b745be9abb3a6d4dadd8705950196d1, type: 3}
   timer: {fileID: 0}
   gameover: {fileID: 0}
+  total_enemy: {fileID: 0}
+  can_win: 0
+  kill_effect: {fileID: 0}
+  damage_effect: {fileID: 0}
+  godMode: 0
 --- !u!95 &3764271992053789189
 Animator:
   serializedVersion: 5
@@ -267,3 +276,43 @@ CapsuleCollider2D:
   m_Offset: {x: -0.032040834, y: 0.78504586}
   m_Size: {x: 0.64411783, y: 1.3070865}
   m_Direction: 0
+--- !u!114 &1829099274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5126507520524490402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f31f95da93595418d4e590101382f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimumJumpForces: 15
+  maximumJumpForces: 15
+--- !u!114 &1829099255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5126507520524490402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ec02d5d796c4f498c238ceb56f3933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1829099268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5126507520524490402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed84955d5e2512546a6ec54b783d7329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slipForces: 10.5
+  slipDirection: 1
