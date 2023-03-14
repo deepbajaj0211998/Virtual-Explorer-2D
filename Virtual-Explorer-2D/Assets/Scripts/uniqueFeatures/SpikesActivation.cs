@@ -5,23 +5,30 @@ using UnityEngine;
 public class SpikesActivation : MonoBehaviour
 {
 
-    public GameObject spikes;
-    public float spikesMovementUp;
-    public float spikesPositionDown;
-    private bool isSpikeUp;
+    //public GameObject spikes;
+    //public float spikesMovementUp;
+    //public float spikesPositionDown;
+    //private bool isSpikeUp;
     //public PrototypeHeroDemo prototypeHero;
-    public PlayerController2D player;
+   
+    public Rigidbody2D rb;
+    
 
+    private void Start() {
+        rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale =0;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            isSpikeUp = false;
-            StartCoroutine(nameof(SpikesUp));
+            rb.gravityScale = 1;
         }
+
+     
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+   /* private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
@@ -43,5 +50,6 @@ public class SpikesActivation : MonoBehaviour
             spikes.transform.localPosition = new Vector3(0, spikesPositionDown, 0);
         }
     }
+    */
 
 }

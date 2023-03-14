@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4096299932219503466}
   - component: {fileID: 4210655474100147033}
   - component: {fileID: 5692587709083937071}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundSensor
   m_TagString: kill
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03125, y: 0}
+  m_Offset: {x: -0.025249094, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.55, y: 0.1}
+  m_Size: {x: 0.5119884, y: 0.1}
   m_EdgeRadius: 0
 --- !u!114 &5692587709083937071
 MonoBehaviour:
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 1829099274}
   - component: {fileID: 1829099255}
   - component: {fileID: 1829099268}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PrototypeHero
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ Transform:
   m_GameObject: {fileID: 5126507520524490402}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4096299932219503466}
@@ -126,8 +126,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_maxSpeed: 4.5
   health: 100
-  m_jumpForce: 7.5
-  m_hideSword: 0
+  m_jumpForce: 7.4
+  m_hideSword: 1
   alive: 1
   m_RunStopDust: {fileID: 7310271610845027193, guid: 39afca3c109b26049a80bc07593eb271, type: 3}
   health_image: {fileID: 0}
@@ -138,8 +138,8 @@ MonoBehaviour:
   gameover: {fileID: 0}
   total_enemy: {fileID: 0}
   can_win: 0
-  kill_effect: {fileID: 0}
-  damage_effect: {fileID: 0}
+  kill_effect: {fileID: 6339914803746857600, guid: 9dbef2aced792b24d9a7d47cb0f4c52d, type: 3}
+  damage_effect: {fileID: 7326792513202242936, guid: 6f80da89b508e1b4bb1003b12ff030a5, type: 3}
   godMode: 0
 --- !u!95 &3764271992053789189
 Animator:
@@ -199,8 +199,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 182444799
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 300ea1a5869382b43bf6149aba92c4db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -243,7 +243,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 5126507520524490402}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 58108da5a41f2784f807c95c400976b8, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -288,8 +288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4f31f95da93595418d4e590101382f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimumJumpForces: 15
-  maximumJumpForces: 15
+  minimumJumpForces: 12
+  maximumJumpForces: 12
 --- !u!114 &1829099255
 MonoBehaviour:
   m_ObjectHideFlags: 0
