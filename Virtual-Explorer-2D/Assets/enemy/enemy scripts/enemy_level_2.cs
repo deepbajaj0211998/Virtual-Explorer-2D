@@ -98,9 +98,8 @@ public class enemy_level_2 : MonoBehaviour
                 if (Time.time > timeLastAttack + timeBetweenAttacks)
                 {
                     GetComponent<Animator>().SetTrigger("attack");
-                    //other.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
-                    // other.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
-                    other.gameObject.GetComponent<advance_character_controller>().TakeDamage(damage);
+                    
+                    other.gameObject.GetComponent<PrototypeHeroDemo>().TakeDamage(damage);
                     timeLastAttack = Time.time;
                     
                 }

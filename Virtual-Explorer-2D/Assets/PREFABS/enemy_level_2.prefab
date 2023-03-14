@@ -107,8 +107,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 182444799
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 4723107735738678597, guid: f8b30c2afe165d645b54d500a9c30862, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -200,14 +200,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef2199a799984b4e8c4b5401b9e96dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 200
+  knockbackForce: 100
   explosionTime: 1
-  explosionDamage: 15
+  explosionDamage: 5
   isDead: 0
   patrolSpeed: 2
   raydist: 1
   groundcheck: {fileID: 3109244110673063909}
-  kill_effect: {fileID: 7326792513202242936, guid: 6f80da89b508e1b4bb1003b12ff030a5, type: 3}
+  kill_effect: {fileID: 3152874756536751965, guid: 646bb25ca5261564fadc06220a690514, type: 3}
   platformLayer:
     serializedVersion: 2
     m_Bits: 64
